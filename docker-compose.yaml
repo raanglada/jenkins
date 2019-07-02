@@ -13,8 +13,6 @@ services:
     image: jenkins/jenkins
     container_name: jenkins_ci-cd
     restart: always
-    environment:
-      JENKINS_ARGS
     volumes:
       - /opt/jenkins/data:/var/jenkins_home
     expose:
