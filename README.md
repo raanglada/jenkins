@@ -29,9 +29,9 @@ $ docker-compose up -d
 
 # Important
 - Remember this is a basic example, for production you need to apply several best practices not applied in this example like:
--- add a system service to start the containers when the machine start, if not, you will have to start it manually.
--- configure ssl certs.
--- automate regular backups of the relevant data of jenkins
+- - add a system service to start the containers when the machine start, if not, you will have to start it manually.
+- - configure ssl certs.
+- - automate regular backups of the relevant data of jenkins
 
 
 
