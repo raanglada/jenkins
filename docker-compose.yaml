@@ -10,7 +10,8 @@ services:
       - 80:80
       - 443:443
   jenkins:
-    image: jenkins/jenkins
+    build: .
+    image: jenkins/jenkins:custom
     container_name: jenkins_ci-cd
     restart: always
     volumes:

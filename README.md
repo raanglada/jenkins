@@ -18,6 +18,11 @@ $ mkdir -p /opt/jenkins/data
 
 - update the configurations for nginx, see nginx/nginx.conf file
 
+- build the image
+```
+$ docker-compose build
+```
+
 - execute the compose
 ```
 $ docker-compose up -d
@@ -32,10 +37,3 @@ $ docker-compose up -d
 - - add a system service to start the containers when the machine start, if not, you will have to start it manually.
 - - configure ssl certs.
 - - automate regular backups of the relevant data of jenkins
-
-
-
-
-
-
-
