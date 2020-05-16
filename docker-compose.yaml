@@ -11,11 +11,17 @@ services:
       - 443:443
   jenkins:
     build: .
-    image: jenkins/jenkins:custom
+    image: raanglada/jenkins-dod-quiet:0.0.1
     container_name: jenkins_ci-cd
     restart: always
+    environment:
+      - JENKINS_USER=admin
+      - JENKINS_PASS=admin123**
+      - JAVA_OPTS="-Dhudson.footerURL=http://myjenkins.com:8080 -Djenkins.install.runSetupWizard=false"
     volumes:
       - /opt/jenkins/data:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/usr/bin/docker
     expose:
       - "8080"
       - "50000"

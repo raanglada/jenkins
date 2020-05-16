@@ -1,12 +1,7 @@
 
-From jenkins/jenkins
+FROM raanglada/jenkins-dod-quiet:latest
 
-USER root
-
-RUN apt update
-RUN apt install -y python-pip curl
-RUN pip install --upgrade pip
-RUN pip install awscli
+LABEL author="anglada.alex@gmail.com"
 
 
 
